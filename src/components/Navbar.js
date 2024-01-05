@@ -10,7 +10,7 @@ function Navbar() {
     <div>
         <nav className="flex justify-between bg-gray-800 h-20">
           <div className="flex text-white justify-between">
-            <div className="m-auto font-bold ml-8">E-comm</div>
+            <span className="m-auto font-bold ml-8">E-comm</span>
             <div className="absolute right-0 top-3 md:hidden">
               <button onClick={() => setIsOpen(!isOpen)}
                 className="flex items-center px-3 rounded text-gray-500 hover:text-gray-400">

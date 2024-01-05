@@ -12,12 +12,6 @@ const initialState = {
     isLoading: true
 }
 
-export const fetchProducts = createAsyncThunk('products/fetch', async () => {
-    const resp = await fetch('https://fakestoreapi.com/products');
-    const data = await resp.json();
-    return data;
-});
-
 const productSlice = createSlice({
     name: 'product',
     initialState: initialState,
@@ -31,14 +25,20 @@ const productSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
-            .addCase(fetchProducts.pending, (state, action) => state.status = STATUSES.LOADING)
+            .addCase(fetchProducts.pending, (state, action) => {state.status = STATUSES.LOADING})
             .addCase(fetchProducts.fulfilled, (state, action) => {
                 state.data = action.payload;
                 state.status = STATUSES.IDLE;
             })
-            .addCase(fetchProducts.rejected, (state, action) => state.status = STATUSES.ERROR);
+            .addCase(fetchProducts.rejected, (state, action) => {state.status = STATUSES.ERROR});
     }
 });
 
 export const { setProduct, remove } = productSlice.actions;
 export default productSlice.reducer;
+
+export const fetchProducts = createAsyncThunk('products/fetch', async () => {
+    const resp = await fetch('https://fakestoreapi.com/products');
+    const data = await resp.json();
+    return data;
+});
