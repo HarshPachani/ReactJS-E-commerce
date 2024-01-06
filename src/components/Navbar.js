@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Navbar() {
     //hooks
   const navigate = useNavigate();
   const[isOpen, setIsOpen] = useState(true);
   
+  const {amount} = useSelector(state => state.cart);
+
   return (
     <div>
         <nav className="flex justify-between bg-gray-800 h-20">
@@ -27,13 +30,13 @@ function Navbar() {
                 
                   <ul className='flex-column absolute right-0 top-16  bg-gray-800 md:flex md:relative md:justify-between md:top-0 justify-around'>
                     <li className="m-3 p-3 mr-8 hover:bg-gray-900  hover:font-bold rounded"><Link to = "/" className="text-white">Home</Link></li>
-                    <li className="m-3 p-3 mr-8 hover:bg-gray-900  hover:font-bold rounded"><Link to="/cart">Cart</Link></li>
+                    <li className="m-3 p-3 mr-8 hover:bg-gray-900  hover:font-bold rounded"><Link to="/cart">Cart <span className="absolute top-4 bg-[#9f2089] rounded-md pl-1 pr-1">{amount}</span></Link></li>
+                    <li className="m-3 p-3 mr-8 hover:bg-gray-900  hover:font-bold rounded"><Link to="/about">About Us</Link></li>
                   </ul> 
               </div>
             </div>
           </div>
         </nav>
-
     </div>
 
   );
