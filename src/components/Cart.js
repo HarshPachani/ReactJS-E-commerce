@@ -17,8 +17,6 @@ function Cart({id, image, title, price, amount}) {
     }
 
   return (
-    // <div className='w-full flex justify-center items-center m-6 p-7'>
-    // <img src={image} alt={title} className='flex justify-center items-center h-6'/> 
     <>
       <div className='object-contain w-full font-bold m-5 p-5 rounded-md md:flex md:justify-around md:items-center border-2 border-gray-600'>
         <div className='m-2 p-2 w-40'>
@@ -47,7 +45,6 @@ function Cart({id, image, title, price, amount}) {
             <Link to={`/product/${id}`} className='p-2 bg-[#9f2089] text-white rounded-md  hover:bg-pink-500 mr-4 mt-4 mb-4'>Details</Link>
             <button onClick = {() => handleRemove(id)} className='p-2 bg-[#9f2089] text-white rounded-md mt-4 mb-4'>Remove</button>
           </div>
-        {/* </div> */}
       </div>
     </>
   )
