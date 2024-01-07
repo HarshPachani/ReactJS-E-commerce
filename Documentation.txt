@@ -1,0 +1,43 @@
+-> Shoutouts to the teachers.
+- reduxtoolkit -> chai or code
+- reduxpractical and reduxpractical-asyncthunk -> freecodecamp(john smilga)
+- toolkitproject -> coder's gyan 
+
+REDUX TOOLKIT is an advanced version of classic REDUX
+
+for installation, simply go to the official REDUX TOOLKIT website.
+1. We use Store for storing the value that a component can access (Just Like ContextAPI)
+2. But REDUX TOOLKIT need a reducer function so that it can change and access the data threw function only.
+
+How to Structure?
+- First, CREATE A FOLDER named App in src FOLDER.
+- Create a store.js file in App folder.
+- Now there is a process to create a store.
+    i. first of all import this -> import { configureStore } from '@reduxjs/toolkit'
+    ii. export const store = configureStore({}) //It takes object only.
+    iii. Now create REDUCERS(SLICES).
+        i. Create a folder inside src directory -> features
+            - There can be multiple features like, Login, Todo, Product, etc...
+    - Everyting else is shown in store.js and todoSlice.js (make sure to end with Slice keyword for naming standards.)
+
+- Now on the frontend side, we have created two components i. AddTodos and ii. Todos
+- To dispatch data from the store, use (From Addtodos.js file)
+    import { useDispatch } from 'react-redux';
+    const dispatch = useDispatch()
+    -NOTE: This dispatch uses reducer to changes the value in the store.
+- To Print data from the store, use (From Todos.js file)
+    import { useSelector } from 'react-redux'
+
+- Now, in the end, we have to wrap up all the application context into the top level.
+for that go to the index.js
+and paste this -> 
+    import { Provider } from 'react-redux';
+    import { store } from './App/store';
+    <Provider store={store}>
+        <App />
+    </Provider>
+
+- and All Set.
+
+- We can access an entire store with the help of useSelector() hook.
+ Ex: console.log(useSelector((store) => console.log(store)));
