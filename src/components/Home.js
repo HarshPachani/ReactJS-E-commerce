@@ -14,7 +14,6 @@ function Home() {
     if(category === 'all') {
       dispatch(setCategory('all'));
     }
-    // const newItems = products.filter((product) => product.category === category);
     dispatch(setCategory(category));
   }
 
