@@ -44,8 +44,10 @@ function SingleProduct() {
   return (
     <div className='m-4'>
         <Link to="/" className='p-2 bg-[#9f2089] text-white font-bold rounded-md m-8 w-full hover:bg-pink-500'> &lt; Back</Link>
-        <div className='flex flex-col justify-center m-9 p-5 text-left'>
-          <img src={product.image} alt={product.title} className='mb-6 flex justify-center items-center pt-12 w-40'/>
+        <div className='flex flex-col justify-center p-5 text-left m-16 mt-0'>
+          <div className='flex justify-center align-baseline mb-5'>
+            <img src={product.image} alt={product.title} className='mb-6 flex justify-center items-center pt-12 w-40'/>
+          </div>
           <h2 className='font-bold'>{product.title}</h2>
           <h2 className='font-bold'>$ {product.price}</h2>
           <h2 className='w-fit rounded-lg font-bold bg-[#9f2089] mr-2 mb-2 mt-2 p-1 flex justify-center items-center text-white'>
@@ -55,10 +57,14 @@ function SingleProduct() {
           </h2>
           <h2>
             <span className='font-bold'>Description</span> :
-            <hr />
-            {product.description}
+            <br />
+            <div className='ml-10'>
+              {product.description}
+            </div>
           </h2>
-          <button onClick={() => handleCart({id, ...product})} className='p-2 bg-[#9f2089] text-white font-bold rounded-md mt-4 w-full hover:bg-pink-500'>Add to Cart</button>
+          <div className='flex justify-center align-baseline'>
+            <button onClick={() => handleCart({id, ...product})} className='p-2 bg-[#9f2089] text-white font-bold rounded-md mt-4 pl-6 pr-6 w-fit hover:bg-pink-500 flex justify-center'>Add to Cart</button>
+          </div>
         </div>
     </div>
   )
