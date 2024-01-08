@@ -43,7 +43,7 @@ function SingleProduct() {
 
   return (
     <div className='m-4'>
-        <Link to="/" className='p-2 bg-[#9f2089] text-white font-bold rounded-md m-8 w-full hover:bg-pink-500'> &lt; Back</Link>
+        <Link to="/ReactJS-E-commerce" className='p-2 bg-[#9f2089] text-white font-bold rounded-md m-8 w-full hover:bg-pink-500'> &lt; Back</Link>
         <div className='flex flex-col justify-center p-5 text-left m-16 mt-0'>
           <div className='flex justify-center align-baseline mb-5'>
             <img src={product.image} alt={product.title} className='mb-6 flex justify-center items-center pt-12 w-40'/>
