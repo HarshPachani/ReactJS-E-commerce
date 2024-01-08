@@ -28,10 +28,10 @@ function App() {
         <Navbar />
         {isOpen && <Modal message={message}/>}
         <Routes>
-          <Route path='/' element={<Home/>} />
-          <Route path="/cart" element={<Carts/>}/>
-          <Route path="/about" element={<About/>}/>
-          <Route path="/product/:id" element={<SingleProduct/>}/>
+          <Route path='/ReactJS-E-commerce' element={<Home/>} />
+          <Route path="/ReactJS-E-commerce/cart" element={<Carts/>}/>
+          <Route path="/ReactJS-E-commerce/about" element={<About/>}/>
+          <Route path="/ReactJS-E-commerce/product/:id" element={<SingleProduct/>}/>
         </Routes>
       </BrowserRouter>
     </Provider>
