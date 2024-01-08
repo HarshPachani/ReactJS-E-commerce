@@ -28,7 +28,7 @@ function Carts() {
   return (
     <>
     <div className='w-fit m-4 ml-9 flex justify-start'>
-      <Link to="/" className='p-2 bg-[#9f2089] text-white font-bold rounded-md m-8 w-full hover:bg-pink-500'> &lt; Home</Link>
+      <Link to="/ReactJS-E-commerce" className='p-2 bg-[#9f2089] text-white font-bold rounded-md m-8 w-full hover:bg-pink-500'> &lt; Home</Link>
     </div>
     <div className='bg-white p-7 rounded-md flex flex-col justify-around items-center w-full'>
         {
