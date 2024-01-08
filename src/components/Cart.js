@@ -42,7 +42,7 @@ function Cart({id, image, title, price, amount}) {
             </div>
           </div>
           <div className='flex sm:flex-col'>
-            <Link to={`/product/${id}`} className='p-2 bg-[#9f2089] text-white rounded-md  hover:bg-pink-500 mr-4 mt-4 mb-4'>Details</Link>
+            <Link to={`/ReactJS-E-commerce/product/${id}`} className='p-2 bg-[#9f2089] text-white rounded-md  hover:bg-pink-500 mr-4 mt-4 mb-4'>Details</Link>
             <button onClick = {() => handleRemove(id)} className='p-2 bg-[#9f2089] text-white rounded-md mt-4 mb-4'>Remove</button>
           </div>
       </div>
