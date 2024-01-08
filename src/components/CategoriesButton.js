@@ -13,7 +13,7 @@ function Categories({categories, filterItems}) {
     <>
       <div className='flex flex-col sm:flex-row sm:justify-end sm:items-center'>
         <span className='font-bold'>Categories:</span>
-        <select name="category" value={item} onChange={(e) => handleChange(e.target.value)} id="category" className='m-4 bg-[#9f2089] text-white font-bold rounded-md mt-4 w-fit hover:bg-pink-500'>
+        <select name="category" value={item} onChange={(e) => handleChange(e.target.value)} id="category" className='m-4 sm:p-1 bg-[#9f2089] text-white font-bold rounded-md mt-4 w-fit hover:bg-pink-500'>
           {
               categories.map((category, index) => {
                   return (
